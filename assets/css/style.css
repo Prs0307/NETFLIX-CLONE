@@ -186,7 +186,7 @@ section{
     padding: 72px 44px;
     align-items: center;
     margin-left: 50px;
-    border-top: 10px solid #222;
+   
 }
 section div.texts h1{
     font-size: 3.124rem;
@@ -250,9 +250,7 @@ z-index: 5;
             left: 90px;
          
             }
-            section.last{
-                border-bottom: 8px solid #222;
-            }
+         
 
             /* faqs */
             div.faq{
@@ -279,6 +277,7 @@ z-index: 5;
                 padding-bottom: 20px;
                 position: relative;
                 font-size: 1.125rem;
+                cursor: pointer;
                 background-color: #303030;
                 margin-top: 10px;
                 border-radius: 4px;
@@ -315,6 +314,13 @@ z-index: 5;
                 overflow: hidden;
                 transition: all 0.21s ease;
             }
+            section
+            {
+
+               
+                border-top: 4px solid #333;
+            }
+
          
             /* div.question.open div.answer{
                 max-height: 1000px;
@@ -335,6 +341,7 @@ z-index: 5;
             div.question input[type="checkbox"]:checked ~ .header svg{
                 transform: rotate(0deg);
                 transition: all 0.03s ease;
+                cursor: progress;
             }
          div.faq form{
                 /* display: grid;
@@ -394,4 +401,72 @@ z-index: 5;
     div.faq {
         display: none;
     }
+}
+/* Your existing CSS code here */
+
+/* Media query for mobile screens with width 320px */
+@media only screen and (max-width: 320px) {
+    /* Adjust width and height for specific elements */
+    header {
+        padding: 5px;
+    }
+
+    /* Adjust padding and margins for specific elements */
+    div.splash div.content {
+        padding: 20px;
+        margin-left: -160px;
+    }
+
+    /* Adjust font size for specific elements */
+    body {
+        font-size: 12px;
+    }
+
+    header a.button {
+        font-size: 14px;
+    }
+
+    section div.texts h1 {
+        font-size: 2rem;
+    }
+
+    section div.texts p {
+        font-size: 1rem;
+    }
+
+    /* Example of hiding the FAQ section on mobile screens */
+    div.faq {
+        display: none;
+    }
+
+    /* Adjust other styles for mobile screens as needed */
+    /* For example, you can adjust border, box-shadow, etc. */
+}
+
+
+.footer{
+    /* border-top: 3px solid #222; */
+    max-width: 90%;
+    margin: 1rem auto;
+    overflow: auto;
+}
+
+.footer ,
+.footer a{
+    color: #999999;
+    font-size: 0.9rem;
+}
+
+.footer p{
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-gap: 2rem;
+}
+
+.footer li{
+    line-height: 2.4;
 }
