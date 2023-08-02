@@ -9,6 +9,11 @@ body {
     background-color: #000;
     color: #fff;
 }
+/* 
+ */
+ img{
+    max-width: 100%;
+ }
 header{
      display: grid;
                         /* to split half half  */
@@ -99,6 +104,8 @@ div.splash div.background img{
 
 div.splash div.content{
     max-width: 1080px;
+    max-height: 100%;
+    margin: 0 auto;
     position: absolute;
     inset: 0;
     display: grid;
@@ -115,7 +122,7 @@ div.splash h1,div.splash h2,div.splash h3{
     }
 div.splash h1{
     padding-top: 50px;
-    font-size: 3.125rem;
+    font-size: 3.125em;
     font-weight: bold;
 }
 div.splash h2{
@@ -126,8 +133,9 @@ div.splash h2{
 div.splash h3{
     font-size: 1.15rem;
 
+
 }
-div.splash form{
+div.cta form{
     position: relative;
     display:grid;
     margin-left: 180px;
@@ -139,7 +147,7 @@ div.splash form{
 input{
     color: white;
     }
-div.splash input{
+div.cta input{
     width:100%;
    padding: 14px ;
    font-size: 1.25rem;
@@ -148,7 +156,7 @@ div.splash input{
     background-color: transparent;
 
 }
-div.splash input ~ span{
+div.cta input ~ span{
     position: absolute;
     left: 10px;
     top:14px;
@@ -157,12 +165,12 @@ div.splash input ~ span{
     transition: all 0.12s ease;
     pointer-events: none;
 }
-div.splash input:focus ~span {
+div.cta input:focus ~span {
     top: 2px;
     font-size: 0.81rem;
     
 } 
-div.splash button{
+div.cta button{
     font-size: 1.625rem;
     margin: 0 0 0 10px;
     padding: 11.001px 28px;
@@ -171,65 +179,219 @@ div.splash button{
     
     background-color: #e50914;
 }
-
-
-
-    /* object-fit: cover; */
-   
-/* 
-    opacity: 0.6;
-}
-div.splash div.content{
-  
-
-
-}
-div.splash h1,div.splash h2,div.splash h3{
-font-weight: normal;
-
-}
-div.splash h1{
-    font-size: 3.125rem;
-    font-weight: bold;
-    /* line-height: 1.1; */
-    /* margin-bottom: 20px; */
-/*  */
-/* div.splash button{
-    
-    appearance: none;
-    font-style: inherit;
-    font-variant: inherit;
-    font-stretch: inherit;
-    font-family: inherit;
-    font-optical-sizing: inherit;
-    font-kerning: inherit;
-    font-feature-settings: inherit;
-    font-variation-settings: inherit;
-    margin: 0px;
-    text-decoration: none;
-    -webkit-box-align: center;
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 72px 44px;
     align-items: center;
-    box-sizing: border-box;
-    display: inline-flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    letter-spacing: normal;
-    line-height: 1;
-    user-select: none;
-    border: 0px;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    fill: currentcolor;
+    margin-left: 50px;
+    border-top: 10px solid #222;
+}
+section div.texts h1{
+    font-size: 3.124rem;
+    margin-bottom: 7px;
+}
+section div.texts p{
+    font-size: 1.623rem;
+}
+.media{
     position: relative;
-    transition-duration: 250ms;
-    transition-property: background-color, border-color;
-    transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
-    vertical-align: text-top;
-    width: auto;
-    font-size: 1.5rem;
-    font-weight: 500;
-    min-height: 3.5rem;
-    padding: 0.75rem 1.5rem;
-    background: rgb(229, 9, 20);
-    color: 
-} */
+}
+.media.s1 img{
+width: 400px;
+position: relative;
+z-index: 5;
+}
+.media.s1 video{
+    width: 290px;
+    position: absolute;
+    top: 63px;
+    left: 54px;
+    }
+    section:nth-child(even) div.texts{
+        order: 2;
+    }
+
+    section div.download{
+        border: 2px solid #666;
+        border-radius: 14px;
+        padding: 14px;
+        height: 98px;
+        display: grid;
+        align-items: center;
+        align-content: center;
+        grid-template-columns: max-content 1fr max-content;
+      position: absolute;
+      /* bottom: 14px;
+      left: 84px; */
+      width: 290px;
+      left: 50%;
+        margin-left: -145px;
+      background-color: #000;
+
+    }
+    section div.download img{
+        height: 60%;
+        width: auto;
+    }
+        section div.s2{
+            margin-bottom: 40px;
+        }
+    .media.s3 img{
+        width: 400px;
+        position: relative;
+        z-index: 5;
+        }
+        .media.s3 video{
+            width: 220px;
+            position: absolute;
+            top: 25px;
+            left: 90px;
+         
+            }
+            section.last{
+                border-bottom: 8px solid #222;
+            }
+
+            /* faqs */
+            div.faq{
+                 
+                padding: 72px 44px;
+                /* border-top: 10px solid #222; */
+            }
+            div.faq h1{
+                font-size: 3.124rem;
+                text-align: center;
+                margin-bottom: 44px;
+            }
+            div.questions{
+                max-width: 620px;
+                margin: 0 auto;
+                /* padding-bottom: 10px; */
+
+            }
+            div.question{
+                /* border-top: 1px solid #333; */
+                /* max-width: 620px; */
+                align-items: center;
+                padding: 20px 0;
+                padding-bottom: 20px;
+                position: relative;
+                font-size: 1.125rem;
+                background-color: #303030;
+                margin-top: 10px;
+                border-radius: 4px;
+                
+
+                
+            }
+            div.question svg{
+                position: absolute;
+                width: 26px;
+                height: 24px;
+                /* padding: 2px; */
+                top: 18px;
+                right: 14px;
+                cursor: pointer;
+                transform: rotate(45deg);
+
+            }
+           
+            div.question .header{
+                display: block;
+                padding: 0 20px;
+                font-size: 1.125rem;
+
+                /* max-height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                padding: 0 14px; */
+            }
+            div.question div.answer{
+                padding: 0 30px;
+                font-size: 0.875rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.21s ease;
+            }
+         
+            /* div.question.open div.answer{
+                max-height: 1000px;
+                transition: all 0.3s ease;
+            } */
+            div.question input[type="checkbox"]{
+                display: none;
+            }
+            div.question input[type="checkbox"]:checked ~ div.answer{
+                transition: all 0.02s ease;
+                border-top: 1.7px solid #000;
+                padding: 10px 20px;
+                font-size: 1.125rem;
+                max-height: 620px;
+                word-spacing: 0.5px;
+                line-height: 1.5;
+            }
+            div.question input[type="checkbox"]:checked ~ .header svg{
+                transform: rotate(0deg);
+                transition: all 0.03s ease;
+            }
+         div.faq form{
+                /* display: grid;
+                grid-template-columns: 1fr max-content; */
+                margin: 0 auto;
+            max-width: 600px;
+         }
+         div.faq h3{
+                margin: 40px 0 20px;
+                text-align: center;
+                font-weight: normal;
+         }
+
+         /* Your existing CSS code here */
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr; /* Change to single column layout */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    div.h1{
+        font-size: 1.82rem;
+    }
+
+    header div.select {
+        margin-right: 10px; /* Adjust margin for smaller screens */
+    }
+
+    div.space {
+        padding: 0; /* Remove padding for smaller screens */
+    }
+
+    /* Adjust font-size for smaller screens */
+    body {
+        font-size: 14px;
+    }
+
+    header a.button {
+        font-size: 14px;
+    }
+
+    /* Adjust margins and paddings for smaller screens */
+    section {
+        padding: 30px 20px;
+    }
+
+    section div.texts h1 {
+        font-size: 2rem;
+    }
+
+    section div.texts p {
+        font-size: 1rem;
+    }
+
+    /* Example of hiding the FAQ section on smaller screens */
+    div.faq {
+        display: none;
+    }
+}
